@@ -1,14 +1,13 @@
 name: Reusable Checkov Scan (pip)
 
 on:
-  workflow_call:
+workflow_call:
 inputs:
-  directory:
-    description: "Directory to scan"
-    required: false
-    type: string
-    default: "."
-
+directory:
+description: "Directory to scan"
+required: false
+type: string
+default: "."
 
   framework:
     description: "IaC framework"
@@ -100,4 +99,3 @@ steps:
     uses: github/codeql-action/upload-sarif@v3
     with:
       sarif_file: results.sarif
-
