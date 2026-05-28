@@ -2,31 +2,30 @@ name: Reusable Checkov Scan (pip)
 
 on:
   workflow_call:
-
-inputs:
-  directory:
-    description: "Directory to scan"
-    required: false
-    type: string
-    default: "."
-
-  framework:
-    description: "IaC framework"
-    required: false
-    type: string
-    default: "terraform"
-
-  checks:
-    description: "Checkov checks to run"
-    required: false
-    type: string
-    default: ""
-
-  soft_fail:
-    description: "Do not fail workflow on findings"
-    required: false
-    type: boolean
-    default: false
+    inputs:
+      directory:
+        description: "Directory to scan"
+        required: false
+        type: string
+        default: "."
+    
+      framework:
+        description: "IaC framework"
+        required: false
+        type: string
+        default: "terraform"
+    
+      checks:
+        description: "Checkov checks to run"
+        required: false
+        type: string
+        default: ""
+    
+      soft_fail:
+        description: "Do not fail workflow on findings"
+        required: false
+        type: boolean
+        default: false
 
 
 jobs:
